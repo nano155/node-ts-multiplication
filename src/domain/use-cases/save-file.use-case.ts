@@ -6,8 +6,8 @@ export interface SaveFileUseCase {
 
 export interface Options {
     fileContent: string;
-    destination: string;
-    fileName: string;
+    destination?: string;
+    fileName?: string;
 }
 
 export class SaveFile implements SaveFileUseCase {
@@ -17,8 +17,8 @@ export class SaveFile implements SaveFileUseCase {
 
     execute({
         fileContent,
-        destination,
-        fileName,
+        destination='outputs',
+        fileName='table'
     }: Options): boolean {
         try {
             fs.mkdirSync(destination, { recursive: true })

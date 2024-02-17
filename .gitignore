@@ -4,4 +4,10 @@ node_modules/
 
 .DS_Store
 
+outputs/
+
+custom-outputs/
 coverage/
+``````
+
+test-detination/
